@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .agregar-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .agregar-item input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .agregar-item button {
+            padding: 10px 15px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .lista-items {
+            list-style: none;
+            padding: 0;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .item.comprado {
+            text-decoration: line-through;
+            color: #95a5a6;
+        }
+        .item-acciones button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .toggle {
+            background-color: #3498db;
+            color: white;
+        }
+        .eliminar {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .contador {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mi Lista de Compras</h1>
+    
+    <div class="agregar-item">
+        <input type="text" id="nuevoItemInput" placeholder="Ej: Leche, pan...">
+        <button id="agregarItemBtn">Agregar</button>
+    </div>
+    
+    <ul class="lista-items" id="listaItems"></ul>
+    
+    <div class="contador" id="contadorItems">0 items en la lista</div>
+
+    <script src="js/listaData.js"></script>
+    <script src="js/listaLogic.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
